@@ -1,0 +1,69 @@
+query forYouQuery($slug: String!) {
+  whatIsMpesas(filters: { slug: { eq: $slug } }) {
+    data {
+      attributes {
+        banner {
+          title
+          description
+          sliderImage {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
+        title {
+          title
+        }
+        usecases {
+          title
+          description
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
+        video {
+          title
+          description
+          button{
+            label
+            url
+          }
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
+        videodesc {
+          id
+          title
+        }
+        bottomContent {
+          id
+          title
+          description
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
+        steps{
+          title
+          excerpt
+          description
+        }
+      }
+    }
+  }
+}

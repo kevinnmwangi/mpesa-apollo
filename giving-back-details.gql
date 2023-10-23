@@ -1,0 +1,34 @@
+query givingBackQuery($slug: String!){
+  givingBacks(filters: { slug: { eq: $slug } }){
+    data{
+      id
+      attributes{
+        createdAt
+        title
+        excerpt
+        slug
+        image{
+          data{
+            attributes{
+              url
+            }
+          }
+        }
+        content{
+          id
+          title
+          description
+          slug
+          excerpt
+          image{
+            data{
+              attributes{
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

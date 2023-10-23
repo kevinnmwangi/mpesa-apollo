@@ -1,0 +1,13 @@
+query impactQuery{
+  ourImpacts{
+    data{
+      attributes{
+        currency
+        figure
+        figureTitle
+        title
+        description
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+query newsQuery($category: String){
+  newsBlogs(filters: { category: { eq: $category } }){
+    data{
+      attributes{
+        title
+        description
+        slug
+        category
+        excerpt
+        createdAt
+        image{
+          data{
+            attributes{
+              url
+            }
+          }
+        }
+        button{
+          label
+          icon{
+            data{
+              attributes{
+                url
+              }
+            }
+          }
+          url
+          
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+query filterInnerpages($title: String, $description: String, $serviceTitle: String, $serviceDescription: String) {
+  innerPageTabs(
+    filters: {
+      or: [
+        { tabitems: { title: { containsi: $title } } },
+        { tabitems: { description: { containsi: $description } } },
+        { services: { title: { containsi: $serviceTitle } } },
+        { services: { description: { containsi: $serviceDescription } } }
+      ]
+    }
+  ) {
+    data {
+      attributes {
+        slug
+        tabitems {
+          title
+          description
+          slug
+        }
+        services {
+          title
+          description
+        }
+      }
+    }
+  }
+}

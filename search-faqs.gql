@@ -1,0 +1,29 @@
+query filterFAQs($category: String, $question: String, $answer: String) {
+  faqCategories(
+    filters: {
+      title: { containsi: $category }
+      and: {
+        faqs: {
+          question: { containsi: $question }
+          and: { answer: { containsi: $answer } }
+        }
+      }
+    }
+  ) {
+    data {
+      id
+      attributes {
+        title
+        faqs {
+          data {
+            attributes {
+              createdAt
+              question
+              answer
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+query newsQuery($slug: String!){
+  newsBlogs(filters: { slug: { eq: $slug } }){
+    data{
+      attributes{
+        title
+        description
+        slug
+        category
+        excerpt
+        createdAt
+        image{
+          data{
+            attributes{
+              url
+            }
+          }
+        }
+        button{
+          label
+          icon{
+            data{
+              attributes{
+                url
+              }
+            }
+          }
+          url
+        }
+        socials{
+          title
+        }
+      }
+    }
+  }
+}

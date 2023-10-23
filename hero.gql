@@ -1,0 +1,27 @@
+query heroQuery{
+  heroes{
+    data{
+      attributes{
+        title
+        subtitle
+        description
+        icon{
+          data{
+            attributes{
+              size
+              url
+            }
+          }
+        }
+        heroImage{
+          data{
+            attributes{
+              size
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}

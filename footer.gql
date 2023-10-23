@@ -1,0 +1,14 @@
+query footerQuery{
+  footers{
+    data{
+      attributes{
+        label
+        footerLink{
+          id
+          label
+  		  url
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+query newsQuery{
+  newsBlogs{
+    data{
+      attributes{
+        title
+        slug
+        content
+        publishedAt
+        image{
+          data{
+            attributes{
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}

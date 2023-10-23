@@ -1,0 +1,19 @@
+query faqCategoriesQuery {
+  faqCategories {
+    data {
+      id
+      attributes {
+        title
+        faqs {
+          data {
+            id
+            attributes {
+              question
+              answer
+            }
+          }
+        }
+      }
+    }
+  }
+}

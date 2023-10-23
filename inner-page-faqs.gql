@@ -1,0 +1,11 @@
+query innerPageFAQs($slug: String!) {
+  faqs(filters: { slug: { eqi: $slug } }) {
+    data {
+      id
+      attributes {
+        question
+        answer
+      }
+    }
+  }
+}

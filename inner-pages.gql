@@ -1,0 +1,81 @@
+query innerPage($slug: String) {
+  innerPageTabs(filters: { slug: { eq: $slug } }) {
+    data {
+      id
+      attributes {
+        createdAt
+        slug
+        banner {
+          title
+          excerpt
+          cssClass
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
+        tabitems {
+          id
+          slug
+          excerpt
+          title
+          description
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          button {
+            label
+            url
+            id
+            icon {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+          }
+        }
+        services {
+          id
+          slug
+          excerpt
+          title
+          description
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          button {
+            label
+            url
+            icon {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+          }
+        }
+        accordion{
+          accordionItem{
+            id
+            heading
+            body
+          }
+        }
+      }
+    }
+  }
+}

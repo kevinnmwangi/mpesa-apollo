@@ -1,0 +1,18 @@
+query downloadAppQuery{
+  downloadApps{
+    data{
+      attributes{
+        Country
+        Flag{
+          data{
+            attributes{
+              url
+            }
+          }
+        }
+        GooglePlayLink
+        AppStoreLink
+      }
+    }
+  }
+}

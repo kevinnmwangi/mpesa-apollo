@@ -1,0 +1,18 @@
+query newsCategory($category: String!) {
+  categories(filters: { name: { eqi: $category } }) {
+    data {
+      id
+      attributes {
+        name
+        newsblog {
+          data {
+            id
+            attributes {
+              title
+            }
+          }
+        }
+      }
+    }
+  }
+}

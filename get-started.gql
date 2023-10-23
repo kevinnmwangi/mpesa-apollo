@@ -1,0 +1,19 @@
+query getStartedQuery {
+  getStarteds{
+    data{
+      attributes{
+        title
+        description
+        content
+        category
+        image{
+          data{
+            attributes{
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}

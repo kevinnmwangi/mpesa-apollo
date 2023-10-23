@@ -1,0 +1,31 @@
+query mainMenuQuery{
+  mainMenu{
+  data{
+    attributes{
+      body{
+        ...on ComponentMenuDropdown{
+          id
+          label
+          submenu{
+            id
+            label
+            icon{
+              data{
+                attributes{
+                  url
+                }
+              }
+            }
+            url
+          }
+        }
+        ...on ComponentMenuLink{
+          id
+          label
+          url
+        }
+      }
+    }
+  }
+  }
+}
